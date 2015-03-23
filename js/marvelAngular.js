@@ -5,34 +5,16 @@ app.controller ('marvelContrl', function($scope){
 	var marvel1 = [];
 	var marvel2 = [];
 
-var addEm = function(){
-	alert(marvel1);
-	alert(marvel2);
-	var arr = marvel1.concat(marvel2);
-
-	var sorted_arr = arr.sort();
-	var results = [];
-	for (var i = 0; i<arr.length -1; i ++){
-		if(sorted_arr[i+1] == sorted_arr[i]){
-			results.push(sorted_arr[i]);
-		}
-	}
-	alert(results);
-$('.events').append("<li>"+ results + "</li>");
-
-}
 
 $scope.woo = function(){
-	$('.events').html('');
-	var	marvel1 = [];
-	var marvel2 = [];
+	$('.events').html("<li> </li>");
 	firstCall();
 	secondCall();
 	addEm();
 	}
 
 	var firstCall = function(){
-	heroName =$scope.wooCharacter ;
+	heroName =$scope.wooCharacter;
 	$('.name').html('');
 	$('.description').html('');
 	$('.image').html('');
@@ -62,10 +44,27 @@ var secondCall = function(){
   		$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
 		$.each(json.data.results[0].events.items, function(i,item){
 			marvel2.push(item.name);	
-		})
+		});
+		alert(marvel2);
 	});
 };
 
+var addEm = function(){
+	console.log("You have done " +marvel1);
+	console.log("You have 2nd done" +marvel2);
+	var arr = marvel1.concat(marvel2);
+
+	var sorted_arr = arr.sort();
+	var results = [];
+	for (var i = 0; i<arr.length -1; i ++){
+		if(sorted_arr[i+1] == sorted_arr[i]){
+			results.push(sorted_arr[i]);
+		}
+	}
+	alert(results);
+$('.events').append("<li>"+ results + "</li>");
+
+}
 
 });
 
