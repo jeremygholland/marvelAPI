@@ -5,7 +5,31 @@ app.controller ('marvelContrl', function($scope){
 	var marvel1 = [];
 	var marvel2 = [];
 
+var addEm = function(){
+	alert(marvel1);
+	alert(marvel2);
+	var arr = marvel1.concat(marvel2);
 
+	var sorted_arr = arr.sort();
+	var results = [];
+	for (var i = 0; i<arr.length -1; i ++){
+		if(sorted_arr[i+1] == sorted_arr[i]){
+			results.push(sorted_arr[i]);
+		}
+	}
+	alert(results);
+$('.events').append("<li>"+ results + "</li>");
+
+}
+
+$scope.woo = function(){
+	$('.events').html('');
+	var	marvel1 = [];
+	var marvel2 = [];
+	firstCall();
+	secondCall();
+	addEm();
+	}
 
 	var firstCall = function(){
 	heroName =$scope.wooCharacter ;
@@ -20,11 +44,13 @@ app.controller ('marvelContrl', function($scope){
   $(".description").append(json.data.results[0].description);
   $(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   	$.each(json.data.results[0].events.items, function(i, item){ 
-  		marvel1.push(item.name);
+  		marvel1.push(item.name);	
   });
+
   
   		});
-}
+};
+
 var secondCall = function(){
 	$('.name1').html('');
 	$('.description1').html('');
@@ -35,31 +61,13 @@ var secondCall = function(){
   		$(".description1").append(json.data.results[0].description);
   		$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
 		$.each(json.data.results[0].events.items, function(i,item){
-			marvel2.push(item.name);
+			marvel2.push(item.name);	
 		})
 	});
-}
+};
 
 
-$scope.woo = function(){
-	$('.events').html('');
-	firstCall();
-	secondCall();
-		alert(marvel1);
-		var arr = marvel1.concat(marvel2);
-	var sorted_arr = arr.sort();
-	var results = []
-	for (var i = 0; i<arr.length -1; i ++){
-		if(sorted_arr[i+1] == sorted_arr[i]){
-			results.push(sorted_arr[i]);
-		}
-	}
-	console.log(results);
-	$('.events').append("<li>"+ results+"</li>");
-
-}
-
-        });
+});
 
 
 
