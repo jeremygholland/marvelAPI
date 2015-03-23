@@ -1,0 +1,33 @@
+<-- You Need to be running this on a SimpleHTTP Server to make the API Request Work -->
+ 
+<!doctype html>
+<html ng-app = "app">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Marvel API</title>
+        <link rel="stylesheet" href="css/image.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="author" href="humans.txt">
+ 
+    </head>
+    <body ng-controller = "marvelContrl">
+        <div class="row">
+             <div class="col-md-4"><input ng-model = "wooCharacter"> <button ng-click = "woo()"> Submit</button></div>
+            <div class="col-md-4">Name: <span class="name"></span></div>
+            <div class=" col-md-4">Description: <span class="description"></span></div>
+            <div class=" col-md-4">image: <img class='image' src='' alt=""></div>
+            </div>
+            <div class="row">
+            <div class=" col-md-6">Number of Comics: <span class="comics"></span></div>
+            <div class="col-md-6">Events: <span class="events"></span> </div>
+            <div class="col-md-6"> Series Summary: <span class="series"> </span></div>
+            </div>
+        </div>
+         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+     <script src = "js/marvelAngular.js"></script>  
+     
+    </body>
+</html>
