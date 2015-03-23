@@ -1,8 +1,8 @@
 var app = angular.module('app', []);
 app.controller ('marvelContrl', function($scope){
-var heroName='';
+	var heroName;
 $scope.woo = function(){
-	$scope.wooCharacter = heroName;
+	heroName =$scope.wooCharacter ;
 	$('.name').html('');
 	$('.description').html('');
 	$('.image').html('');
@@ -11,7 +11,7 @@ $scope.woo = function(){
   $(".name").append(json.data.results[0].name);
   $(".description").append(json.data.results[0].description);
   $(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
-  $.each(json.data.results[0].stories.items, function(i, item){
+  $.each(json.data.results[0].series.items, function(i, item){
   		$('.events').append("<li>"+item.name+"</li>");
 
   })
