@@ -10,7 +10,6 @@ $scope.woo = function(){
 	$('.events').html("<li> </li>");
 	firstCall();
 	secondCall();
-	addEm();
 	}
 
 	var firstCall = function(){
@@ -19,7 +18,7 @@ $scope.woo = function(){
 	$('.description').html('');
 	$('.image').html('');
 	$('.events').html('');
-	$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName + "&limit=100&apikey=9b468921eeceda45d379088e81c48169", function (json) {
+	$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then(function (json) {
 		var charOneID = json.data.results[0].id; 
 		console.log(charOneID);
   $(".name").append(json.data.results[0].name);
@@ -38,7 +37,7 @@ var secondCall = function(){
 	$('.description1').html('');
 	$('.image1').html('');
 	heroName2 = $scope.wooCharacter2;
-	$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=9b468921eeceda45d379088e81c48169", function (json) {
+	$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then( function (json) {
 		$(".name1").append(json.data.results[0].name);
   		$(".description1").append(json.data.results[0].description);
   		$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
@@ -46,12 +45,9 @@ var secondCall = function(){
 			marvel2.push(item.name);	
 		});
 		alert(marvel2);
-	});
-};
-
-var addEm = function(){
-	console.log("You have done " +marvel1);
-	console.log("You have 2nd done" +marvel2);
+	}).then(function(){
+		console.log("You have done " +marvel1);
+	alert("You have 2nd done" +marvel2);
 	var arr = marvel1.concat(marvel2);
 
 	var sorted_arr = arr.sort();
@@ -62,9 +58,11 @@ var addEm = function(){
 		}
 	}
 	alert(results);
-$('.events').append("<li>"+ results + "</li>");
+$('.events').html("<li>"+ results + "</li>");
 
-}
+	})
+};
+
 
 });
 
