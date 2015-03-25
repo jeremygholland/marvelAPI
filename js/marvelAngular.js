@@ -30,7 +30,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 1);
 
-			}, 300);
+			}, 400);
 	},
 	two: function(callback){
 		$('.name1').html('');
@@ -42,31 +42,43 @@ $scope.woo = function(){
   				$(".description1").append(json.data.results[0].description);
   				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
 				$.each(json.data.results[0].events.items, function(i,item){
-					marvel2.push(item.name);	
+					marvel2.push(item.name);
+
 			});
+				console.log(marvel2);	
 
 			})
 			setTimeout(function(){
 				callback(null, 2);
-			}, 200);
+			}, 300);
 		},
 		three: function(callback){
 
 
 		var arr = marvel1.concat(marvel2);
 			var sorted_arr = arr.sort();
-			var results = [];
+			$scope.results1 = [];
 			for (var i = 0; i<arr.length -1; i ++){
 				if(sorted_arr[i+1] == sorted_arr[i]){
-					results.push(sorted_arr[i]);
+					$scope.results1.push(sorted_arr[i]);
 				}
 			}
+		console.log($scope.results1);
 			setTimeout(function(){
 				callback(null, 3);
-			}, 100);
-		$('.events').html("<li>"+ results + "</li>");
-		console.log(results);
-	}
+			}, 200);
+	}, 
+	four: function(callback){
+			marvel1 = [];
+			marvel2= []
+			$scope.wooCharacter2 = '';
+			$scope.wooCharacter = '';
+		
+		setTimeout(function(){
+				callback(null, 4);
+			}, 1);
+		},
+
 		},
 		function(err, results){
 			console.log(results);
