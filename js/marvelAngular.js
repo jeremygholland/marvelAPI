@@ -33,7 +33,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 1);
 
-			}, 1000);
+			}, 1500);
 	},
 	two: function(callback){
 		$('.name1').html('');
@@ -53,7 +53,7 @@ $scope.woo = function(){
 			})
 			setTimeout(function(){
 				callback(null, 2);
-			}, 1000);
+			}, 1400);
 		},
 		three: function(callback){
 
