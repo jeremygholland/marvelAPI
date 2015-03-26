@@ -30,7 +30,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 1);
 
-			}, 400);
+			}, 600);
 	},
 	two: function(callback){
 		$('.name1').html('');
@@ -50,23 +50,31 @@ $scope.woo = function(){
 			})
 			setTimeout(function(){
 				callback(null, 2);
-			}, 300);
+			}, 500);
 		},
 		three: function(callback){
 
 
 		var arr = marvel1.concat(marvel2);
 			var sorted_arr = arr.sort();
-			$scope.results1 = [];
+			var results1 = [];
 			for (var i = 0; i<arr.length -1; i ++){
 				if(sorted_arr[i+1] == sorted_arr[i]){
-					$scope.results1.push(sorted_arr[i]);
+					results1.push(sorted_arr[i]);
 				}
+
+				//this is fucked but it's a start
+			
 			}
-		console.log($scope.results1);
+				for (var j = 0; j<results1.length; j ++){
+						$('.events').append('<li><a href = #>'+results1[j]+'</a></li>');
+					}
+
+			//for loop on results1
+		console.log(results1);
 			setTimeout(function(){
 				callback(null, 3);
-			}, 200);
+			}, 300);
 	}, 
 	four: function(callback){
 			marvel1 = [];
