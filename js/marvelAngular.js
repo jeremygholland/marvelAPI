@@ -2,9 +2,11 @@ var app = angular.module('app', []);
 app.controller ('marvelContrl', function($scope){
 	var heroName;
 	var heroName2;
+	var seriesName;
 	var marvel1 = [];
 	var marvel2 = [];
-
+$scope.main = true;
+$scope.newDiv= false;
 
 $scope.woo = function(){
 	$('.events').html("<li> </li>");
@@ -67,7 +69,7 @@ $scope.woo = function(){
 			
 			}
 				for (var j = 0; j<results1.length; j ++){
-						$('.events').append('<li><a href = #>'+results1[j]+'</a></li>');
+						$('.events').append('<li ng-model = "tryThisNow"><p>'+results1[j]+'</p></li>');
 					}
 
 			//for loop on results1
@@ -93,7 +95,15 @@ $scope.woo = function(){
 });
 
 	}
-
+	
+	$scope.click = function(){
+		$scope.main = false;
+		$scope.newDiv = true;
+	$scope.tryThis = seriesName;
+$.getJSON("http://gateway.marvel.com:80/v1/public/events?name="+seriesName+"&apikey=9b468921eeceda45d379088e81c48169", function (json){
+	$(".name1").append(json.data.results[0].description);
+})
+}
 
 
 	});
