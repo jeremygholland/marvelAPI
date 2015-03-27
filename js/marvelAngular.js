@@ -33,7 +33,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 1);
 
-			}, 1500);
+			}, 1000);
 	},
 	two: function(callback){
 		$('.name1').html('');
@@ -53,7 +53,7 @@ $scope.woo = function(){
 			})
 			setTimeout(function(){
 				callback(null, 2);
-			}, 1400);
+			}, 1000);
 		},
 		three: function(callback){
 
@@ -70,14 +70,19 @@ $scope.woo = function(){
 			
 			}
 				for (var j = 0; j<results1.length; j ++){
-						$('.events').append('<li id = '+results1[j]+'><a href= #> '+results1[j]+'</a></li>');
+						$('.events').append('<li id = '+j+'><a href= #> '+results1[j]+'</a></li>');
+						$('#'+j).click(function(){
+
+							var tryIt = $(this).text();
+							console.log(tryIt);
+						});
 					}
 
 			//for loop on results1
 		console.log(results1);
 			setTimeout(function(){
 				callback(null, 3);
-			}, 300);
+			}, 800);
 	}, 
 	four: function(callback){
 			marvel1 = [];
