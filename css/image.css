@@ -2,3 +2,8 @@
 	width: 250px;
 	height: auto;
 }
+.ui-helper-hidden-accessible { display:none; }
+.ui-helper-hidden-accessible { position: absolute; left:-999em; }
+input{max-height: 2em;
+	overflow: hidden;}
+	.ui-autocomplete { height: 30em; overflow-y: hidden; overflow-x: hidden;}
