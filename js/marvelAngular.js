@@ -11,15 +11,65 @@ app.controller ('marvelContrl', function($scope){
 $scope.main = true;
 $scope.newDiv= false;
 
+$(function() {
+var totalChar = [
+"3-D Man", "A-Bomb (HAS)",
+"A.I.M.", "Aaron Stack",
+"Abomination (Emil Blonsky)",
+"Abomination (Ultimate)",
+"Absorbing Man", "Abyss",
+"Abyss (Age of Apocalypse)",
+"Adam Destine", "Adam Warlock",
+"Aegis (Trey Rollins)", "Agent Brand", 
+"Agent X (Nijo)", "Agent Zero", 
+"Agents of Atlas", "Aginar", 
+"Air-Walker (Gabriel Lan)", "Ajak", 
+"Ajaxis", "Akemi", "Alain", "Albert Cleary", 
+"Albion", "Alex Power", "Alex Wilder", 
+"Alexa Mendez", "Alexander Pierce", "Alice", 
+"Alicia Masters", "Alpha Flight", "Alpha Flight (Ultimate)", 
+"Alvin Maker", "Amadeus Cho", "Amanda Sefton", "Amazoness", 
+"American Eagle (Jason Strongbow)", "Amiko", "Amora", 
+"Amphibian (Earth-712)", "Amun", "Ancient One", 
+"Ancient One (Ultimate)", "Angel (Thomas Halloway)", 
+"Angel (Ultimate)", "Angel (Warren Worthington III)", 
+"Angela (Aldrif Odinsdottir)", "Anita Blake", 
+"Anne Marie Hoag", "Annihilus", 
+"Anole", "Ant-Man (Eric O'Grady)", "Ant-Man (Scott Lang)", 
+"Anthem", "Apocalypse", "Apocalypse (Ultimate)", 
+"Aqueduct", "Arachne", "Araٌa", "Arcade", "Arcana", 
+"Archangel", "Arclight", "Ares", "Argent", 
+"Armadillo", "Armor (Hisako Ichiki)", "Armory", 
+"Arnim Zola", "Arsenic", "Artiee", "Asgardian", 
+"Askew-Tronics", "Asylum", "Atlas (Team)", 
+"Aurora", "Avalanche", "Avengers", "Avengers (Ultimate)", 
+"Azazel (Mutant)", "Banshee", "Banshee (Theresa Rourke)", 
+"Baron Strucker", "Baron Zemo (Heinrich Zemo)", "Baron Zemo (Helmut Zemo)", 
+"Baroness S'Bak", "Barracuda", "Bart Rozum", "Bastion", "Batroc the Leaper", 
+"Battering Ram", "Beak", "Beast", "Beast (Earth-311)", "Beast (Ultimate)", 
+"Becatron", "Bedlam", "Beef", "Beetle (Abner Jenkins)", "Ben Grimm"];
+
+	$('#bigTime').autocomplete({
+		source: totalChar 
+	});
+});
+
 $scope.woo = function(){
 	$('.events').html("<li> </li>");
 	async.series({
 	one: function(callback){
-		heroName =$scope.wooCharacter;
+    heroName =  $("#littleTime").val();
 			$('.name').html('');
 			$('.description').html('');
 			$('.image').html('');
 			$('.events').html('');
+			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?limit=100&offset=100&apikey=9b468921eeceda45d379088e81c48169").then(function (json) {
+				for(n = 0; n<json.data.results.length; n++){
+					totalChar.push(json.data.results[n].name);
+					console.log(totalChar);
+				}
+
+			});
 			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then(function (json) {
   		$(".name").append(json.data.results[0].name);
   		$(".description").append(json.data.results[0].description);
@@ -28,7 +78,6 @@ $scope.woo = function(){
   				marvel1.push(item.name);
 
   		});
-  			console.log(marvel1);	
 
   
   				});
@@ -41,7 +90,7 @@ $scope.woo = function(){
 		$('.name1').html('');
 			$('.description1').html('');
 			$('.image1').html('');
-			heroName2 = $scope.wooCharacter2;
+			heroName2 = $('#bigTime').val();
 			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then( function (json) {
 				$(".name1").append(json.data.results[0].name);
   				$(".description1").append(json.data.results[0].description);
@@ -49,8 +98,7 @@ $scope.woo = function(){
 				$.each(json.data.results[0].events.items, function(i,item){
 					marvel2.push(item.name);
 
-			});
-				console.log(marvel2);	
+			});	
 
 			})
 			setTimeout(function(){
@@ -84,20 +132,26 @@ $scope.woo = function(){
 							$(".eventName").append(json.data.results[0].title);
 							$(".eventDesc").append(json.data.results[0].description);
 							var wooStuff = (json.data.results[0].id);
-							console.log(wooStuff);
+							
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/characters?limit=100&apikey=9b468921eeceda45d379088e81c48169').then (function (json){
 								for(f = 0; f<json.data.results.length; f++ ){
 									var shit = json.data.results[f].name;
-								console.log(json.data.results.length);
 									$('.eventChar').append('<li>'+json.data.results[f].name+'</li>');
 								}
 							})
+
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?limit=100&apikey=9b468921eeceda45d379088e81c48169').then (function (json){
+								for(w = 0; w<json.data.results.length; w++ ){
+									var shit1 = json.data.results[w].name;
+									$('.eventSer').append('<li>'+json.data.results[w].name+'</li>');
+								}
+							})
+
 							});
 					});
 					}
 
 			//for loop on results1
-		console.log(results1);
 			setTimeout(function(){
 				callback(null, 3);
 			}, 800);

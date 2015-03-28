@@ -15,8 +15,8 @@
     <body ng-controller = "marvelContrl">
         <div class="row">
             <div class="main">
-             <div class="col-md-4"><input ng-model = "wooCharacter"></div>
-              <div class="col-md-4 col-md-offset-2"><input id = "bigTime" ng-model = "wooCharacter2"> <button ng-click = "woo()"> Submit</button></div>
+             <div class="col-md-4"><input ng-model = "wooCharacter" id = "littleTime"></div>
+              <div class="col-md-4 col-md-offset-2 , ui-widget"> <input id = "bigTime" ng-model = "wooCharacter2"> <button ng-click = "woo()"> Submit</button></div>
             <div class="col-md-4">Name: <span class="name"></span></div>
             <div class=" col-md-4">Description: <span class="description"></span></div>
             <div class=" col-md-4">image: <img class='image' src='' alt=""></div>
@@ -36,15 +36,18 @@
                 <div class="col-md-6"> image: <img src="" alt="" class="image3"></div>
             <div class="col-md-6">Event Description: <span class="eventDesc"></span></div>
             <div class="col-md-6">Event Characters: <span class="eventChar"> </span></div>
+            <div class="col-md-">Event Series: <span class="eventSer"></span></div>
             </div>
         </div>
         <script scr="https://cdnjs.cloudflare.com/ajax/libs/async/0.9.0/async.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
          <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+         <script src ='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.js'></script>
 
 </script> 
     <script src = "js/async.js"></script>
      <script src = "js/marvelAngular.js"></script>  
+     <script scr = "js/totalChar.js"></script>
      
     </body>
 </html>
