@@ -58,13 +58,10 @@ $scope.woo = function(){
   		console.log(id1);
   		$(".description").append(json.data.results[0].description);
   		$(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
-  		$.getJSON("http://gateway.marvel.com:80/v1/public/characters/"+ id1+"/events?limit=100&apikey=9b468921eeceda45d379088e81c48169").then(function (json){
-  			for(s = 0; s<json.data.results.length; s++ ){
-				var shit1 = json.data.results[s].title;
-							marvel1.push(shit1);
-						console.log(json.data.results.length);
-								}
-  		})
+  		$.each(json.data.results[0].events.items, function(i, item){
+					marvel1.push(item.name);
+
+			})
 
   
   				});
@@ -84,17 +81,14 @@ $scope.woo = function(){
   				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   				var id2 = json.data.results[0].id;
 				
-				$.getJSON("http://gateway.marvel.com:80/v1/public/characters/"+ id2+"/events?limit=100&apikey=9b468921eeceda45d379088e81c48169").then(function (json){
-  			for(q = 0; q<json.data.results.length; q++ ){
-				var shit = json.data.results[q].title;
-						marvel2.push(shit);
-								}
-  		})
+				$.each(json.data.results[0].events.items, function(i, item){
+					marvel2.push(item.name);
 
 			})
 			setTimeout(function(){
 				callback(null, 2);
 			}, 1500);
+		})
 		},
 		three: function(callback){
 

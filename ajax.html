@@ -1,4 +1,3 @@
-<-- You Need to be running this on a SimpleHTTP Server to make the API Request Work -->
  
 <!doctype html>
 <html ng-app = "app">
@@ -15,6 +14,7 @@
     <body ng-controller = "marvelContrl">
         <div class="container">
         <div class="row">
+            <div class="col-md-6 col-md-offset-3"> <h2> Watcher Watch</h2> </div>
             <div class="main">
              <div class="col-md-4 , ui-widget"> <label> <input id = "littleTime" ng-model = "wooCharacter" >  </label> </div>
               <div class="col-md-4 col-md-offset-2 , ui-widget"> <label>  <input id = "bigTime" ng-model = "wooCharacter1"></label> <button ng-click = "woo()"> Submit</button></div>
