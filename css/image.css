@@ -4,9 +4,22 @@
 }
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
-input{max-height: 2em;
-	overflow: hidden;}
+.container{background-color: #7f8c8d}
+body{max-height: 2em;
+	overflow: hidden;
+	border-radius: 2em;
+	box-shadow: 2px 2px 2px black}
 	.ui-autocomplete { height: 30em; overflow-y: hidden; overflow-x: hidden;}
 .charList, .serList{height:20em;
 			overflow:auto;}
-.newStart, .charList, .serList{margin-top: 2em;}
+.newStart, .charList, .serList, .eDesc, .startOver{
+	margin-top: 2em;}
+.middleSpot{margin-top: 2em}
+.eName{font-size: 3em}
+
+.inputType{font-size: 1.2em}
+.startBtn{width: 10em;
+		height:3em;
+		border-radius: 2em;
+		box-shadow: 2px 2px 2px black;
+		margin-top: 2em}

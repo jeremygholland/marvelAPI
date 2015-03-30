@@ -13,13 +13,17 @@
     </head>
     <body ng-controller = "marvelContrl">
         <div class="container">
-        <div class="row">
             <div class="col-md-6 col-md-offset-3"> <h2> Watcher Watch</h2> </div>
             <div class="main">
-             <div class="col-md-4 , ui-widget"> <label> <input id = "littleTime" ng-model = "wooCharacter" >  </label> </div>
-              <div class="col-md-4 col-md-offset-2 , ui-widget"> <label>  <input id = "bigTime" ng-model = "wooCharacter1"></label> <button ng-click = "woo()"> Submit</button></div>
+        <div class="row">
+             <div class="col-md-4 , ui-widget"> <div class="inputType"> <label for = "totalChar"> Select Second Character: </label><input id = "littleTime" ng-model = "wooCharacter" >  </div></div>
+              <div class="col-md-4 col-md-offset-2 , ui-widget"> <div class="inputType"> <label for = "totalChar"> Select Second Character: </label>  <input id = "bigTime" ng-model = "wooCharacter1"> </div></div></div> 
+            <div class="row">
+                <div class="col-md-4 col-md-offset-3">
+                <button class = "startBtn" ng-click = "woo()"> Submit</button>
+                </div>
+            </div>
           </div>
-      </div>
       <div class="row">
         <div class="firstInfo">
             <div class="col-md-4 , nameDiv">Name: <span class="name"></span></div>
@@ -34,16 +38,16 @@
         </div>
         <div class="newDiv" >
         <div class="row">
-                <div class="col-md-6 col-md-offset-3"> Event Name: <span class="eventName"> </span></div>
+                <div class="col-md-6 col-md-offset-3"> <div class="eName"> <span class="eventName"> </span></div></div>
             </div>
             <div class="row">
-            <div class="col-md-6 col-md-offset-3">Event Description: <span class="eventDesc"></span></div>
+            <div class="col-md-6 col-md-offset-3"> <div class="eDesc">Event Description: <br> <span class="eventDesc"></span></div></div>
             </div>
-            <div class="row">
+            <div class="row , middleSpot">
             <div class="col-md-2 col-md-offset-2"> <div class="charList">Event Characters: <span class="eventChar"> </span></div></div>
             <div class="col-md-2 col-md-offset-2"> <div class="serList"> Event Series: <span class="eventSer"></span></div></div>
             </div>
-            <div class="col-md-4 col-md-offset-4"> <button class="newStart" ng-click = "startOver()"> New Search</button> </div>
+            <div class="col-md-4 col-md-offset-4"> <div class="startOver"> <button class="newStart" ng-click = "startOver()"> New Search</button> </div></div>
             </div>
         </div>
         </div>
