@@ -26,6 +26,7 @@ input{max-height: 2em;
 	box-shadow: 2px 2px 2px black}
 	.ui-autocomplete { height: auto; 
 			width:10em;
+			line-height: 1.5em;
 			overflow-y: hidden; 
 			overflow-x: hidden;
 			font-size: 1.2em;
@@ -33,9 +34,7 @@ input{max-height: 2em;
 			border-radius: 1em;
 			box-shadow: 2px 2px 2px black;
 			}
-	.ui-autocomplete:hover{
-		font-style: underline;
-	}
+	.ui-state-focus{color: #9B50BA;}
 .charList, .serList{height:20em;
 			overflow:auto;
 			width:15em;
@@ -59,13 +58,15 @@ button{width: 10em;
 button:hover{
 	background-color: #40D47E
 }
+.wooYeah{color:black;}
 .events{line-height: 2em;
 		margin-top: 1em;}
 .banner{ margin-bottom: 3em;
 		border: 3px solid #E98B39;
 		border-radius: 2em;
 		margin-top: 1em;
-		box-shadow: 2px 2px 2px black}
+		box-shadow: 2px 2px 2px black;
+		line-height: 2em}
 .startBtn{margin-left: 25%}
 img{margin-bottom: 2em;
 	border-radius: 2em}

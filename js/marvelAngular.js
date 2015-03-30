@@ -196,6 +196,8 @@ $scope.woo = function(){
 			$('.image1').html('');
 			$scope.wooCharacter = '';
 			$scope.wooCharacter1 = '';
+			$('.charStuff').hide()
+	$('.serStuff').hide();
 			
 		}	
 });
