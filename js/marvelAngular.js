@@ -114,20 +114,20 @@ $scope.woo = function(){
 
 							var tryIt = $(this).text();
 							console.log(tryIt);
-							$.getJSON('http://gateway.marvel.com:80/v1/public/events?name=' + tryIt + '&apikey=9b468921eeceda45d379088e81c48169').then (function (json){
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events?name=' + tryIt + '&apikey=9b468921eeceda45d379088e81c48169', function (json){
 							$(".eventName").append(json.data.results[0].title);
 							$(".eventDesc").append(json.data.results[0].description);
 							var wooStuff = (json.data.results[0].id);
 							console.log(wooStuff);
 							
-							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/characters?limit=100&apikey=9b468921eeceda45d379088e81c48169').then (function (json){
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/characters?limit=100&apikey=9b468921eeceda45d379088e81c48169', function (json){
 								for(f = 0; f<json.data.results.length; f++ ){
 									var shit = json.data.results[f].name;
 									$('.eventChar').append('<li>'+json.data.results[f].name+'</li>');
 								}
 							})
 
-							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?limit=100&apikey=9b468921eeceda45d379088e81c48169').then (function (json){
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?apikey=9b468921eeceda45d379088e81c48169', function (json){
 								for(w = 0; w<json.data.results.length; w++ ){
 									var shit1 = json.data.results[w].title;
 									$('.eventSer').append('<li>'+json.data.results[w].title+'</li>');
@@ -141,7 +141,7 @@ $scope.woo = function(){
 			//for loop on results1
 			setTimeout(function(){
 				callback(null, 3);
-			}, 800);
+			}, 2500);
 	}, 
 
 		},
