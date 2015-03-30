@@ -112,11 +112,19 @@ $scope.woo = function(){
 			for (var i = 0; i<arr.length -1; i ++){
 				if(sorted_arr[i+1] == sorted_arr[i]){
 					results1.push(sorted_arr[i]);
+
+				}
+				else{
+					results1 = false;
 				}
 
 				//this is fucked but it's a start
 			
 			}
+			if(results1 == false){
+				$('.events').append("<p> Odd, it seems like these two characters don't share events. Try again!</p>")
+			}
+			else{
 				for (var j = 0; j<results1.length; j ++){
 						$('.events').append('<li id = '+j+'><a href= #>'+results1[j]+'</a></li>');
 						$('#'+j).click(function(){
@@ -146,12 +154,14 @@ $scope.woo = function(){
 									var shit1 = json.data.results[w].title;
 									$('.eventSer').append('<li>'+json.data.results[w].title+'</li>');
 								}
+								$('.serStuff').fadeIn('slow');
 
 							})
 
 							});
 					});
 					}
+				}
 
 			//for loop on results1
 			setTimeout(function(){

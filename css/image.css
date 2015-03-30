@@ -2,6 +2,15 @@
 	width: 250px;
 	height: auto;
 }
+a{color:#4AA3DF;}
+#title, #subtitle{text-align: center;
+	margin-right: 2.5em;}
+.logo{ height: 8em;
+		width:auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: .5em}
+#logo1{margin-left: 6em}
 .firstInfo{margin-top: 2em}
 
 .ui-helper-hidden-accessible { display:none; }
@@ -29,7 +38,8 @@ input{max-height: 2em;
 	}
 .charList, .serList{height:20em;
 			overflow:auto;
-			width:10em;
+			width:15em;
+			margin-top: 20em;
 			border:2px solid #E98B39;
 			border-radius: 2em;
 			text-align: center}
@@ -49,5 +59,12 @@ button{width: 10em;
 button:hover{
 	background-color: #40D47E
 }
+.events{line-height: 2em;
+		margin-top: 1em;}
+.banner{ margin-bottom: 3em;
+		border: 3px solid #E98B39;
+		border-radius: 2em;
+		margin-top: 1em}
+.startBtn{margin-left: 25%}
 img{margin-bottom: 2em;
 	border-radius: 2em}
