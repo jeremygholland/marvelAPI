@@ -4,7 +4,7 @@
 }
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
-body{background-color: #7f8c8d;
+body{background-color: #354B60;
 	color:#E98B39;
 	text-shadow:2px 2px 2px black;}
 input{max-height: 2em;
@@ -22,7 +22,10 @@ input{max-height: 2em;
 			}
 .charList, .serList{height:20em;
 			overflow:auto;
-			width:auto;}
+			width:10em;
+			border:2px solid #E98B39;
+			border-radius: 2em;
+			text-align: center}
 .newStart, .charList, .serList, .eDesc, .startOver{
 	margin-top: 2em;}
 .middleSpot{margin-top: 2em}

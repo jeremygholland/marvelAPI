@@ -2,6 +2,8 @@ var app = angular.module('app', []);
 app.controller ('marvelContrl', function($scope){
 	$('.newDiv').hide();
 	$('.firstInfo').hide();
+	$('.charStuff').hide()
+	$('.serStuff').hide();
 	var heroName;
 	var heroName2;
 	var seriesName;
@@ -12,6 +14,7 @@ app.controller ('marvelContrl', function($scope){
 	var totalChar = [];
 	$scope.wooCharacter;
 	$scope.wooCharacter1;
+
 
 $(function() {
 var totalChar = [
@@ -125,6 +128,7 @@ $scope.woo = function(){
 									var shit = json.data.results[f].name;
 									$('.eventChar').append('<li>'+json.data.results[f].name+'</li>');
 								}
+								$('.charStuff').fadeIn('slow');
 							})
 
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?apikey=9b468921eeceda45d379088e81c48169', function (json){
@@ -133,6 +137,7 @@ $scope.woo = function(){
 									$('.eventSer').append('<li>'+json.data.results[w].title+'</li>');
 								}
 							})
+							$('.serStuff').fadeIn('slow');
 
 							});
 					});
