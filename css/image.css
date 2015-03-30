@@ -4,14 +4,25 @@
 }
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
-.container{background-color: #7f8c8d}
-body{max-height: 2em;
+body{background-color: #7f8c8d;
+	color:#E98B39;
+	text-shadow:2px 2px 2px black;}
+input{max-height: 2em;
 	overflow: hidden;
 	border-radius: 2em;
 	box-shadow: 2px 2px 2px black}
-	.ui-autocomplete { height: 30em; overflow-y: hidden; overflow-x: hidden;}
+	.ui-autocomplete { height: auto; 
+			width:10em;
+			overflow-y: hidden; 
+			overflow-x: hidden;
+			font-size: 1.2em;
+			border:2px solid #E98B39;
+			border-radius: 1em;
+			box-shadow: 2px 2px 2px black;
+			}
 .charList, .serList{height:20em;
-			overflow:auto;}
+			overflow:auto;
+			width:auto;}
 .newStart, .charList, .serList, .eDesc, .startOver{
 	margin-top: 2em;}
 .middleSpot{margin-top: 2em}
