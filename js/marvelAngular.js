@@ -59,7 +59,12 @@ $scope.woo = function(){
   		$(".name").append(json.data.results[0].name);
   		var id1 = json.data.results[0].id;
   		console.log(id1);
+  		if(json.data.results[0].description == ''){
+  			$(".description").append('<p> No description was found for this character </p>');
+  		}
+  		else{
   		$(".description").append(json.data.results[0].description);
+  	}
   		$(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   		$.each(json.data.results[0].events.items, function(i, item){
 					marvel1.push(item.name);
@@ -80,7 +85,12 @@ $scope.woo = function(){
 			heroName2 = $('#bigTime').val();
 			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then( function (json) {
 				$(".name1").append(json.data.results[0].name);
+				if(json.data.results[0].description == ''){
+					$(".description1").append('<p> No description was found for this character </p>');
+				}
+				else{
   				$(".description1").append(json.data.results[0].description);
+  				}
   				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   				var id2 = json.data.results[0].id;
 				
@@ -136,8 +146,8 @@ $scope.woo = function(){
 									var shit1 = json.data.results[w].title;
 									$('.eventSer').append('<li>'+json.data.results[w].title+'</li>');
 								}
+
 							})
-							$('.serStuff').fadeIn('slow');
 
 							});
 					});

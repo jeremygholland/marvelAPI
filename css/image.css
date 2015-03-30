@@ -2,6 +2,8 @@
 	width: 250px;
 	height: auto;
 }
+.firstInfo{margin-top: 2em}
+
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
 body{background-color: #354B60;
@@ -10,6 +12,8 @@ body{background-color: #354B60;
 input{max-height: 2em;
 	overflow: hidden;
 	border-radius: 2em;
+	text-shadow: 2px 2px 2px black;
+	background-color: #354B60;
 	box-shadow: 2px 2px 2px black}
 	.ui-autocomplete { height: auto; 
 			width:10em;
@@ -20,6 +24,9 @@ input{max-height: 2em;
 			border-radius: 1em;
 			box-shadow: 2px 2px 2px black;
 			}
+	.ui-autocomplete:hover{
+		font-style: underline;
+	}
 .charList, .serList{height:20em;
 			overflow:auto;
 			width:10em;
@@ -32,8 +39,15 @@ input{max-height: 2em;
 .eName{font-size: 3em}
 
 .inputType{font-size: 1.2em}
-.startBtn{width: 10em;
+button{width: 10em;
 		height:3em;
 		border-radius: 2em;
 		box-shadow: 2px 2px 2px black;
-		margin-top: 2em}
+		margin-top: 2em;
+		background-color: #354B60;
+	font-size: 1.5em}
+button:hover{
+	background-color: #40D47E
+}
+img{margin-bottom: 2em;
+	border-radius: 2em}
