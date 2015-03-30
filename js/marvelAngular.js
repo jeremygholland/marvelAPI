@@ -114,14 +114,11 @@ $scope.woo = function(){
 					results1.push(sorted_arr[i]);
 
 				}
-				else{
-					results1 = false;
-				}
 
 				//this is fucked but it's a start
 			
 			}
-			if(results1 == false){
+			if(results1 == ''){
 				$('.events').append("<p> Odd, it seems like these two characters don't share events. Try again!</p>")
 			}
 			else{
