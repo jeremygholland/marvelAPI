@@ -4,6 +4,7 @@ app.controller ('marvelContrl', function($scope){
 	$('.firstInfo').hide();
 	$('.charStuff').hide()
 	$('.serStuff').hide();
+	$('.reStart').hide();
 	var heroName;
 	var heroName2;
 	var seriesName;
@@ -119,7 +120,8 @@ $scope.woo = function(){
 			
 			}
 			if(results1 == ''){
-				$('.events').append("<p> Odd, it seems like these two characters don't share events. Try again!</p>")
+				$('.events').append("<p> Odd, it seems like these two characters don't share events. Try again!</p>");
+				$('.reStart').fadeIn('slow');
 			}
 			else{
 				for (var j = 0; j<results1.length; j ++){
@@ -197,6 +199,7 @@ $scope.woo = function(){
 			$scope.wooCharacter = '';
 			$scope.wooCharacter1 = '';
 			$('.charStuff').hide()
+			$('.reStart').hide();
 	$('.serStuff').hide();
 			
 		}	

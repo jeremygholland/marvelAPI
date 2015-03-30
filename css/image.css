@@ -5,6 +5,7 @@
 a{color:#4AA3DF;}
 #title, #subtitle{text-align: center;
 	margin-right: 2.5em;}
+	#title{font-size: 4em}
 .logo{ height: 8em;
 		width:auto;
 		margin-left: auto;
@@ -66,7 +67,7 @@ button:hover{
 		border-radius: 2em;
 		margin-top: 1em;
 		box-shadow: 2px 2px 2px black;
-		line-height: 2em}
+		line-height: 1em}
 .startBtn{margin-left: 25%}
 img{margin-bottom: 2em;
 	border-radius: 2em}
