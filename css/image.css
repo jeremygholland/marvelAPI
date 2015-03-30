@@ -7,3 +7,6 @@
 input{max-height: 2em;
 	overflow: hidden;}
 	.ui-autocomplete { height: 30em; overflow-y: hidden; overflow-x: hidden;}
+.charList, .serList{height:20em;
+			overflow:auto;}
+.newStart, .charList, .serList{margin-top: 2em;}
