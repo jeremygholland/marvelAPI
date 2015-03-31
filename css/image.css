@@ -2,16 +2,16 @@
 	width: 250px;
 	height: auto;
 }
+.newishStart{margin-right: 20em}
 a{color:#4AA3DF;}
 #title, #subtitle{text-align: center;
 	margin-right: 2.5em;}
 	#title{font-size: 4em}
-.logo{ height: 8em;
+.logo{ height: 9em;
 		width:auto;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: .5em}
-#logo1{margin-left: 6em}
+		margin-top: 1.8em}
 .firstInfo{margin-top: 2em}
 
 .ui-helper-hidden-accessible { display:none; }
@@ -20,7 +20,9 @@ body{background-color: #354B60;
 	color:#E98B39;
 	font-family: open Sans, arial;
 	text-shadow:2px 2px 2px black;}
-input{max-height: 2em;
+input{height: 3em;
+	width: 15em;
+	text-align: center;
 	overflow: hidden;
 	border-radius: 2em;
 	text-shadow: 2px 2px 2px black;
@@ -28,7 +30,8 @@ input{max-height: 2em;
 	box-shadow: 2px 2px 2px black}
 	.ui-autocomplete { height: auto; 
 			width:10em;
-			line-height: 1.5em;
+			list-style:none;
+			line-height: 2em;
 			overflow-y: hidden; 
 			overflow-x: hidden;
 			font-size: 1.2em;

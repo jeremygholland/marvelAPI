@@ -5,16 +5,16 @@ app.controller ('marvelContrl', function($scope){
 	$('.charStuff').hide()
 	$('.serStuff').hide();
 	$('.reStart').hide();
-	var heroName;
-	var heroName2;
+	var heroName = '';
+	var heroName2 = '';
 	var seriesName;
 	var marvel1 = [];
 	var marvel2 = [];
 	var results1 = [];
 	var wooStuff;
 	var totalChar = [];
-	$scope.wooCharacter;
-	$scope.wooCharacter1;
+	$scope.wooCharacter = '';
+	$scope.wooCharacter1 = '';	
 
 
 $(function() {
@@ -46,6 +46,10 @@ var totalChar = [
 });
 
 $scope.woo = function(){
+	if(($scope.wooCharacter == '') || ($scope.wooCharacter1 =='')){
+		$('.wooNess').append('<h2> Please make two selections. </h2>');
+	}
+	else{
 	$('.main').hide();
 	$('.firstInfo').show();
 	$('.events').html("<li> </li>");
@@ -170,6 +174,7 @@ $scope.woo = function(){
 							});
 					});
 					}
+					$('.reStart').fadeIn('slow');
 				}
 
 			//for loop on results1
@@ -184,6 +189,7 @@ $scope.woo = function(){
 });
 
 	}
+}
 	$scope.startOver = function(){
 			marvel1 = [];
 			marvel2= [];
@@ -205,6 +211,7 @@ $scope.woo = function(){
 			$(".eventName").html('');
 			$('.name1').html('');
 			$('.description1').html('');
+			$('.wooNess').html('');
 			$('.image1').attr('src', ' ');
 			$scope.wooCharacter = '';
 			$scope.wooCharacter1 = '';
