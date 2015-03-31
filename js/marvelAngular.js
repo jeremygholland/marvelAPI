@@ -61,12 +61,17 @@ $scope.woo = function(){
   		var id1 = json.data.results[0].id;
   		console.log(id1);
   		if(json.data.results[0].description == ''){
-  			$(".description").append('<p> No description was found for this character </p>');
+  			$(".description").append('<p> No description was found for '+heroName+'.</p>');
   		}
   		else{
-  		$(".description").append(json.data.results[0].description);
+  		$(".description").append('<p class = "characterDescription">'+json.data.results[0].description+'</p>');
   	}
+  		if(json.data.results[0].thumbnail.path == null){
+  			$('.image').attr("src", "http://vertex-uae.com/images/no-image-found.jpg");
+  		}
+  		else{
   		$(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
+  		}
   		$.each(json.data.results[0].events.items, function(i, item){
 					marvel1.push(item.name);
 
@@ -77,7 +82,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 1);
 
-			}, 1500);
+			}, 2000);
 	},
 	two: function(callback){
 			$('.name1').html('');
@@ -87,12 +92,17 @@ $scope.woo = function(){
 			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then( function (json) {
 				$(".name1").append(json.data.results[0].name);
 				if(json.data.results[0].description == ''){
-					$(".description1").append('<p> No description was found for this character </p>');
+					$(".description1").append('<p> No description was found for '+heroName2+'.</p>');
 				}
 				else{
-  				$(".description1").append(json.data.results[0].description);
+  				$(".description1").append('<p class = "characterDescription">'+json.data.results[0].description+'</p>');
   				}
+  				if(json.data.results[0].thumbnail.path == null){
+  					$('.image1').attr("src", "http://vertex-uae.com/images/no-image-found.jpg");
+  				}
+  				else{
   				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
+  				}
   				var id2 = json.data.results[0].id;
 				
 				$.each(json.data.results[0].events.items, function(i, item){
@@ -101,7 +111,7 @@ $scope.woo = function(){
 			})
 			setTimeout(function(){
 				callback(null, 2);
-			}, 1500);
+			}, 2000);
 		})
 		},
 		three: function(callback){
@@ -188,14 +198,14 @@ $scope.woo = function(){
 			$('.firstInfo').hide();
 			$('.name').html('');
 			$('.description').html('');
-			$('.image').html('');
+			$('.image').attr('src', '');
 			$('.events').html('');
 			$('.eventChar').html('');
 			$(".eventDesc").html('');
 			$(".eventName").html('');
 			$('.name1').html('');
 			$('.description1').html('');
-			$('.image1').html('');
+			$('.image1').attr('src', ' ');
 			$scope.wooCharacter = '';
 			$scope.wooCharacter1 = '';
 			$('.charStuff').hide()

@@ -42,7 +42,10 @@ input{max-height: 2em;
 			margin-top: 20em;
 			border:2px solid #E98B39;
 			border-radius: 2em;
-			text-align: center}
+			text-align: center;
+			box-shadow: 2px 2px 2px black}
+.eventSer, .eventChar{margin-top: 20em;
+			line-height: 2em;}
 .newStart, .charList, .serList, .eDesc, .startOver{
 	margin-top: 2em;}
 .middleSpot{margin-top: 2em}
@@ -71,3 +74,5 @@ button:hover{
 .startBtn{margin-left: 25%}
 img{margin-bottom: 2em;
 	border-radius: 2em}
+.characterDescription{font-size: 1.2em;
+					margin-top: 2.5em}
