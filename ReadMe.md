@@ -1,6 +1,6 @@
 # Marvel API 
 
-This project demonstrates how to use JSON requests asynchronously. The project uses jquery for JSON requests, Async.JS to load those requests in seqential order, Jquery-UI for autocomplete functionality, with Bootstrap and Angular on the front end.
+This project demonstrates how to use JSON requests asynchronously using the Marvel API. The project uses jquery for JSON requests, Async.JS to load those requests in seqential order, Jquery-UI for autocomplete functionality, with Bootstrap and Angular on the front end.
 
 If you would like to demo the project, follow these steps in your terminal:
 
