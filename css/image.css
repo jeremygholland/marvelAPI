@@ -4,10 +4,7 @@
 }
 .newishStart{margin-right: 20em}
 a{color:#4AA3DF;}
-<<<<<<< HEAD
-=======
 #title, #subtitle{}
->>>>>>> 48d15f088b4df860ef0ed9e4e04f92cc39343945
 	#title{font-size: 4em}
 .logo{ height: 9em;
 		width:auto;
@@ -51,11 +48,15 @@ input{height: 3em;
 			text-align: center;
 			box-shadow: 2px 2px 2px black}
 .serStuff, .charStuff{font-size: 1.2em;
-			line-height: 2em;}
+			line-height: 2em;
+			margin-top: 2em}
 .newStart, .charList, .serList, .eDesc, .startOver{
 	margin-top: 2em;}
 .middleSpot{margin-top: 2em}
-.eName{font-size: 3em}
+.eName{font-size: 3em;
+		text-align: center;}
+.eDesc{font-size: 1.2em;
+		text-align:center;}
 
 .inputType{font-size: 1.2em}
 button{width: 10em;
@@ -83,10 +84,10 @@ button:hover{
 		margin-top: 1em;
 		box-shadow: 2px 2px 2px black;
 		line-height: 1em}
-.startBtn{margin-left: 25%}
 img{margin-bottom: 2em;
 	border-radius: 2em}
 .characterDescription{font-size: 1.2em;
 					margin-top: 2.5em}
 .eventList{font-size:1.2em;
 			line-height: 2.2em}
+.eventName{text-align: center}
