@@ -4,8 +4,7 @@
 }
 .newishStart{margin-right: 20em}
 a{color:#4AA3DF;}
-#title, #subtitle{text-align: center;
-	margin-right: 2.5em;}
+#title, #subtitle{}
 	#title{font-size: 4em}
 .logo{ height: 9em;
 		width:auto;
