@@ -18,6 +18,7 @@ a{color:#4AA3DF;}
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
 body{background-color: #354B60;
 	color:#E98B39;
+	font-family: open Sans, arial;
 	text-shadow:2px 2px 2px black;}
 input{max-height: 2em;
 	overflow: hidden;
@@ -44,7 +45,7 @@ input{max-height: 2em;
 			border-radius: 2em;
 			text-align: center;
 			box-shadow: 2px 2px 2px black}
-.eventSer, .eventChar{margin-top: 20em;
+.serStuff, .charStuff{font-size: 1.2em;
 			line-height: 2em;}
 .newStart, .charList, .serList, .eDesc, .startOver{
 	margin-top: 2em;}
@@ -58,14 +59,20 @@ button{width: 10em;
 		box-shadow: 2px 2px 2px black;
 		margin-top: 2em;
 		background-color: #354B60;
+		text-shadow: 2px 2px 2px black;
 	font-size: 1.5em}
 button:hover{
-	background-color: #40D47E
+	background-color: #D14233;
+	color:#FBFCFC;
+	text-shadow: 2px 2px 2px black;
 }
+#nameText{font-size: 1.5em}
 .wooYeah{color:black;}
 .events{line-height: 2em;
 		margin-top: 1em;}
 .banner{ margin-bottom: 3em;
+		margin-left: 1em;
+		margin-right: 1em;
 		border: 3px solid #E98B39;
 		border-radius: 2em;
 		margin-top: 1em;
@@ -76,3 +83,5 @@ img{margin-bottom: 2em;
 	border-radius: 2em}
 .characterDescription{font-size: 1.2em;
 					margin-top: 2.5em}
+.eventList{font-size:1.2em;
+			line-height: 2.2em}
