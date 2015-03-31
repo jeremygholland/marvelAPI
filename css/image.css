@@ -2,6 +2,9 @@
 	width: 250px;
 	height: auto;
 }
+#firstInfo, .secondInfo{z-index: -9000;
+			height: 80vh;
+			width: auto;}
 .newishStart{margin-right: 20em}
 a{color:#4AA3DF;}
 #title, #subtitle{}
@@ -16,9 +19,9 @@ a{color:#4AA3DF;}
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
 body{background-color: #354B60;
-	color:#E98B39;
+	color:white;
 	font-family: open Sans, arial;
-	text-shadow:2px 2px 2px black;}
+	text-shadow:1px 1px 1px black;}
 input{height: 3em;
 	width: 15em;
 	text-align: center;

@@ -5,6 +5,8 @@ app.controller ('marvelContrl', function($scope){
 	$('.charStuff').hide()
 	$('.serStuff').hide();
 	$('.reStart').hide();
+	$('.secondInfo').hide();
+	$("#firstInfo").hide();
 	var heroName = '';
 	var heroName2 = '';
 	var seriesName;
@@ -74,7 +76,7 @@ $scope.woo = function(){
   			$('.image').attr("src", "http://vertex-uae.com/images/no-image-found.jpg");
   		}
   		else{
-  		$(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
+  		$("#firstInfo").css('background-image', 'url('+ json.data.results[0].thumbnail.path + "/detail.jpg" +')');
   		}
   		$.each(json.data.results[0].events.items, function(i, item){
 					marvel1.push(item.name);
@@ -83,6 +85,7 @@ $scope.woo = function(){
 
   
   				});
+			$("#firstInfo").fadeIn('slow');
 			setTimeout(function(){
 				callback(null, 1);
 
@@ -105,7 +108,7 @@ $scope.woo = function(){
   					$('.image1').attr("src", "http://vertex-uae.com/images/no-image-found.jpg");
   				}
   				else{
-  				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
+  				$(".secondInfo").css('background-image', 'url('+ json.data.results[0].thumbnail.path + "/detail.jpg" +')');
   				}
   				var id2 = json.data.results[0].id;
 				
@@ -117,6 +120,7 @@ $scope.woo = function(){
 				callback(null, 2);
 			}, 2000);
 		})
+			$('.secondInfo').fadeIn('slow');
 		},
 		three: function(callback){
 
@@ -217,7 +221,9 @@ $scope.woo = function(){
 			$scope.wooCharacter1 = '';
 			$('.charStuff').hide()
 			$('.reStart').hide();
-	$('.serStuff').hide();
+			$('.secondInfo').hide();
+			$("#firstInfo").hide();
+			$('.serStuff').hide();
 			
 		}	
 });
