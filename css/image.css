@@ -6,6 +6,8 @@
 	box-shadow: 2px 2px 2px black;
 	border-radius: 2em;
 }
+.loading, .loading1{font-size: 1.2em;
+					margin-top: 2em}
 .description, .description1{ margin-top:20%;}
 
 #firstInfo, .secondInfo{z-index: 1;
@@ -16,7 +18,7 @@
 .firstInfo{margin-left: 1em;
 			margin-right: 1em}
 .newishStart{margin-right: 20em}
-a{color:#D91E18;}
+a{color:#F9BF3B;}
 #title, #subtitle{}
 	#title{font-size: 4em}
 .logo{ height: 9em;
@@ -29,9 +31,9 @@ a{color:#D91E18;}
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
 body{background-color: #0A5FA2;
-	color:white;
+	color:#F9BF3B;
 	font-family: open Sans, arial;
-	text-shadow:1px 1px 1px black;}
+	text-shadow:2px 2px 2px black;}
 input{height: 3em;
 	width: 15em;
 	text-align: center;
@@ -47,7 +49,7 @@ input{height: 3em;
 			overflow-y: hidden; 
 			overflow-x: hidden;
 			font-size: 1.2em;
-			border:2px solid #E98B39;
+			border:2px solid #F9BF3B;
 			border-radius: 1em;
 			box-shadow: 2px 2px 2px black;
 			}
@@ -56,7 +58,7 @@ input{height: 3em;
 			overflow:auto;
 			width:15em;
 			margin-top: 20em;
-			border:2px solid #E98B39;
+			border:2px solid #F9BF3B;
 			border-radius: 2em;
 			text-align: center;
 			box-shadow: 2px 2px 2px black}
@@ -85,15 +87,17 @@ button:hover{
 	color:#FBFCFC;
 	text-shadow: 2px 2px 2px black;
 }
-#nameText{font-size: 1.5em;
-		text-align: center}
+#charStuff{text-align: right}
+#serStuff{text-align: center;
+		margin-left: 2em}
+#nameText{font-size: 1.5em;}
 .wooYeah{color:black;}
 .events{line-height: 2em;
 		margin-top: 1em;}
 .banner{ margin-bottom: 3em;
 		margin-left: 1em;
 		margin-right: 1em;
-		border: 3px solid #E98B39;
+		border: 3px solid #F9BF3B;
 		border-radius: 2em;
 		margin-top: 1em;
 		box-shadow: 2px 2px 2px black;

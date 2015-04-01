@@ -59,8 +59,14 @@
             <div class="col-md-6 col-md-offset-3"> <div class="eDesc"> <i> <span class="eventDesc"></span></i> </p></div>
             </div>
             <div class="row , middleSpot">
-            <div class="col-md-2 col-md-offset-3 text-center"> <div class="charStuff"> Event Characters:<div class="charList"> <span class="eventChar"> </span></div></div></div>
-            <div class="col-md-2 col-md-offset-2 text-center"> <div class="serStuff"> Event Series: <div class="serList"> <span class="eventSer"></span></div></div></div>
+            <div class="col-md-2 col-md-offset-3 text-center">
+            <p class="loading"> Loading character list, please wait...</p>
+                <div class="charStuff">
+             <p id="charStuff"> Event Characters: </p><div class="charList"> <span class="eventChar"> </span></div></div></div>
+            <div class="col-md-2 col-md-offset-2 text-center">
+                 <p class="loading1"> Loading series list, please wait...</p>
+             <div class="serStuff">
+             <p id="serStuff"> Event Series: </p><div class="serList"> <span class="eventSer"></span></div></div></div>
             </div>
             <div class="text-center"> <div class="startOver"> <button class="newStart" ng-click = "startOver()"> New Search</button> </div></div>
             </div>

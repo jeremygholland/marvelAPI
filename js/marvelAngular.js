@@ -10,6 +10,8 @@ app.controller ('marvelContrl', function($scope){
 	$('.events').hide();
 	$(".image1").hide();
 	$('.image').hide();
+	$('.loading1').hide();
+	$('.loading').hide();
 	var heroName = '';
 	var heroName2 = '';
 	var seriesName;
@@ -157,6 +159,8 @@ $scope.woo = function(){
 
 							var tryIt = $(this).text();
 							console.log(tryIt);
+							$('.loading1').show();
+							$('.loading').show();
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events?name=' + tryIt + '&apikey=9b468921eeceda45d379088e81c48169', function (json){
 							$(".eventName").append(json.data.results[0].title);
 							$(".eventDesc").append(json.data.results[0].description);
@@ -168,14 +172,17 @@ $scope.woo = function(){
 									var shit = json.data.results[f].name;
 									$('.eventChar').append('<li>'+json.data.results[f].name+'</li>');
 								}
+								$('.loading').hide();
 								$('.charStuff').fadeIn('slow');
 							})
 
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?apikey=9b468921eeceda45d379088e81c48169', function (json){
+								
 								for(w = 0; w<json.data.results.length; w++ ){
 									var shit1 = json.data.results[w].title;
 									$('.eventSer').append('<li>'+json.data.results[w].title+'</li>');
 								}
+								$('.loading1').hide();
 								$('.serStuff').fadeIn('slow');
 
 							})
@@ -233,6 +240,8 @@ $scope.woo = function(){
 			$('.events').hide();
 			$(".image1").hide();
 			$('.image').hide();
+			$('.loading1').hide();
+			$('.loading').hide();
 			
 		}	
 });
