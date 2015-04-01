@@ -8,6 +8,8 @@ app.controller ('marvelContrl', function($scope){
 	$('.secondInfo').hide();
 	$("#firstInfo").hide();
 	$('.events').hide();
+	$(".image1").hide();
+	$('.image').hide();
 	var heroName = '';
 	var heroName2 = '';
 	var seriesName;
@@ -77,7 +79,7 @@ $scope.woo = function(){
   			$('.image').attr("src", "http://vertex-uae.com/images/no-image-found.jpg");
   		}
   		else{
-  		$("#firstInfo").css('background-image', 'url('+ json.data.results[0].thumbnail.path + "/detail.jpg" +')');
+  		$(".image").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   		}
   		$.each(json.data.results[0].events.items, function(i, item){
 					marvel1.push(item.name);
@@ -86,7 +88,8 @@ $scope.woo = function(){
 
   
   				});
-			$("#firstInfo").fadeIn('slow');
+			$('.image').fadeIn(1000)
+			$("#firstInfo").fadeIn(1500);
 			setTimeout(function(){
 				callback(null, 1);
 
@@ -109,7 +112,7 @@ $scope.woo = function(){
   					$('.image1').attr("src", "http://vertex-uae.com/images/no-image-found.jpg");
   				}
   				else{
-  				$(".secondInfo").css('background-image', 'url('+ json.data.results[0].thumbnail.path + "/detail.jpg" +')');
+  				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   				}
   				var id2 = json.data.results[0].id;
 				
@@ -117,7 +120,8 @@ $scope.woo = function(){
 					marvel2.push(item.name);
 
 			})
-				$('.secondInfo').fadeIn('slow');
+				$('.image1').fadeIn(1000);
+				$('.secondInfo').fadeIn(1500);
 			setTimeout(function(){
 				callback(null, 2);
 			}, 2000);
@@ -227,6 +231,8 @@ $scope.woo = function(){
 			$("#firstInfo").css("background-image", "url('')");
 			$('.serStuff').hide();
 			$('.events').hide();
+			$(".image1").hide();
+			$('.image').hide();
 			
 		}	
 });
