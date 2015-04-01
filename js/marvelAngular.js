@@ -7,6 +7,7 @@ app.controller ('marvelContrl', function($scope){
 	$('.reStart').hide();
 	$('.secondInfo').hide();
 	$("#firstInfo").hide();
+	$('.events').hide();
 	var heroName = '';
 	var heroName2 = '';
 	var seriesName;
@@ -116,11 +117,11 @@ $scope.woo = function(){
 					marvel2.push(item.name);
 
 			})
+				$('.secondInfo').fadeIn('slow');
 			setTimeout(function(){
 				callback(null, 2);
 			}, 2000);
 		})
-			$('.secondInfo').fadeIn('slow');
 		},
 		three: function(callback){
 
@@ -178,8 +179,9 @@ $scope.woo = function(){
 							});
 					});
 					}
-					$('.reStart').fadeIn('slow');
 				}
+				$('.events').fadeIn('slow');
+					$('.reStart').fadeIn('slow');
 
 			//for loop on results1
 			setTimeout(function(){
@@ -221,9 +223,10 @@ $scope.woo = function(){
 			$scope.wooCharacter1 = '';
 			$('.charStuff').hide()
 			$('.reStart').hide();
-			$('.secondInfo').hide();
-			$("#firstInfo").hide();
+			$('.secondInfo').css("background-image", "url('')");
+			$("#firstInfo").css("background-image", "url('')");
 			$('.serStuff').hide();
+			$('.events').hide();
 			
 		}	
 });

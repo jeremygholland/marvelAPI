@@ -2,9 +2,11 @@
 	width: 250px;
 	height: auto;
 }
+.description, .description1{ margin-top:20%;}
 #firstInfo, .secondInfo{z-index: -9000;
 			height: 80vh;
-			width: auto;}
+			width: 100%;
+			text-align: center}
 .newishStart{margin-right: 20em}
 a{color:#4AA3DF;}
 #title, #subtitle{}
