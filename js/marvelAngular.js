@@ -170,7 +170,7 @@ $scope.woo = function(){
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/characters?limit=100&apikey=9b468921eeceda45d379088e81c48169', function (json){
 								for(f = 0; f<json.data.results.length; f++ ){
 									var shit = json.data.results[f].name;
-									$('.eventChar').append('<li>'+json.data.results[f].name+'</li>');
+									$('.eventChar').append('<li class = "cEvents">'+json.data.results[f].name+'</li>');
 								}
 								$('.loading').hide();
 								$('.charStuff').fadeIn('slow');
@@ -180,7 +180,7 @@ $scope.woo = function(){
 								
 								for(w = 0; w<json.data.results.length; w++ ){
 									var shit1 = json.data.results[w].title;
-									$('.eventSer').append('<li>'+json.data.results[w].title+'</li>');
+									$('.eventSer').append('<li class = "cStories">'+json.data.results[w].title+'</li>');
 								}
 								$('.loading1').hide();
 								$('.serStuff').fadeIn('slow');

@@ -5,7 +5,12 @@
 	z-index: -9000;
 	box-shadow: 2px 2px 2px black;
 	border-radius: 2em;
+	opacity: .60;
 }
+p{font-size: 1.2em}
+.cEvents, .cStories{margin-left: 1em;
+					margin-right: 1em;
+					list-style:none;}
 .loading, .loading1{font-size: 1.2em;
 					margin-top: 2em}
 .description, .description1{ margin-top:20%;}
@@ -31,7 +36,7 @@ a{color:#F9BF3B;}
 .ui-helper-hidden-accessible { display:none; }
 .ui-helper-hidden-accessible { position: absolute; left:-999em; }
 body{background-color: #0A5FA2;
-	color:#F9BF3B;
+	color:white;
 	font-family: open Sans, arial;
 	text-shadow:2px 2px 2px black;}
 input{height: 3em;
@@ -60,7 +65,6 @@ input{height: 3em;
 			margin-top: 20em;
 			border:2px solid #F9BF3B;
 			border-radius: 2em;
-			text-align: center;
 			box-shadow: 2px 2px 2px black}
 .serStuff, .charStuff{font-size: 1.2em;
 			line-height: 2em;
