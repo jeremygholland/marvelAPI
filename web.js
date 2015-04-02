@@ -4,7 +4,7 @@ var morgan = require('morgan');
 var router = express.Router();
 var app = express();
 
-app.get('/', "index.html");
+app.get('/', "index");
 
 app.use(gzippo.staticGzip("" + __dirname + "/dist"));
 app.listen(process.env.PORT || port)
