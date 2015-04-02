@@ -26,7 +26,6 @@ p{font-size: 1.2em}
 			margin-right: 1em}
 .newishStart{margin-right: 20em}
 a{color:#F9BF3B;}
-#title, #subtitle{}
 	#title{font-size: 4em}
 .logo{ height: 9em;
 		width:auto;
@@ -117,3 +116,36 @@ button:hover{
 .eventList{font-size:1.2em;
 			line-height: 2.2em}
 .eventName{text-align: center}
+
+
+
+@media screen and (max-width: 990px){
+	.logo{display:none;}
+	#title{font-size: 3.5em}
+	.banner{ margin-bottom: 3em;
+		text-align: center;
+		margin-left: 10%;
+		border: 0px;
+		border-radius: 2em;
+		margin-top: 1em;
+		box-shadow: 0px 0px 0px black;
+		line-height: 1em}
+		input{height: 3em;
+	width: 90vw;}
+	input{width:45vw;}
+	.image1, .image{width: 80vw;
+	height: 80vh;}
+	.ui-autocomplete { width:45vw;
+		list-style:circle;
+			height: auto;
+			max-height: 40vh}
+			.startBtn{margin-top: 42vh}
+	#bigTime{margin-left: 6vw}
+	#charStuff, #serStuff{text-align: center}
+	.charList, .serList{margin-left: 10vw;
+						width: 80vw;}
+		#serStuff{margin-right: 5vh;}
+		input:focus{background-color: #D14233}
+}
+
+

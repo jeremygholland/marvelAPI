@@ -24,6 +24,7 @@ app.controller ('marvelContrl', function($scope){
 	$scope.wooCharacter1 = '';	
 
 
+
 $(function() {
 var totalChar = [
 
@@ -51,6 +52,7 @@ var totalChar = [
 		source: totalChar
 	});
 });
+
 
 $scope.woo = function(){
 	if(($scope.wooCharacter == '') || ($scope.wooCharacter1 =='')){
