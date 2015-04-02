@@ -95,7 +95,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 1);
 
-			}, 2000);
+			}, 2500);
 	},
 	two: function(callback){
 			$('.name1').html('');

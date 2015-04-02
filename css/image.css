@@ -7,6 +7,8 @@
 	border-radius: 2em;
 	opacity: .60;
 }
+
+.eventPush{margin-left:2 }
 p{font-size: 1.2em}
 .cEvents, .cStories{margin-left: 1em;
 					margin-right: 1em;
@@ -45,7 +47,7 @@ input{height: 3em;
 	overflow: hidden;
 	border-radius: 2em;
 	text-shadow: 2px 2px 2px black;
-	background-color: #354B60;
+	background-color: #0A5FA2;
 	box-shadow: 2px 2px 2px black}
 	.ui-autocomplete { height: auto; 
 			width:10em;
@@ -94,10 +96,12 @@ button:hover{
 #charStuff{text-align: right}
 #serStuff{text-align: center;
 		margin-left: 2em}
-#nameText{font-size: 1.5em;}
+#nameText{font-size: 1.5em;
+		margin-left: 4em}
 .wooYeah{color:black;}
 .events{line-height: 2em;
-		margin-top: 1em;}
+		margin-top: 1em;
+		margin-left: 4em}
 .banner{ margin-bottom: 3em;
 		margin-left: 1em;
 		margin-right: 1em;
