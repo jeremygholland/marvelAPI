@@ -41,6 +41,8 @@ body{background-color: #0A5FA2;
 	color:white;
 	font-family: open Sans, arial;
 	text-shadow:2px 2px 2px black;}
+
+input:focus{outline:none;}
 input{height: 3em;
 	width: 15em;
 	text-align: center;
