@@ -69,7 +69,7 @@ $scope.woo = function(){
 			$('.description').html('');
 			$('.image').html('');
 			$('.events').html('');
-			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then(function (json) {
+			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName + "&limit=100&apikey= INSERT YOUR API KEY").then(function (json) {
   		$(".name").append(json.data.results[0].name);
   		var id1 = json.data.results[0].id;
   		console.log(id1);
@@ -104,7 +104,7 @@ $scope.woo = function(){
 			$('.description1').html('');
 			$('.image1').html('');
 			heroName2 = $('#bigTime').val();
-			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=9b468921eeceda45d379088e81c48169").then( function (json) {
+			$.getJSON("http://gateway.marvel.com:80/v1/public/characters?name=" + heroName2 + "&limit=100&apikey=INSERT YOUR API KEY").then( function (json) {
 				$(".name1").append(json.data.results[0].name);
 				if(json.data.results[0].description == ''){
 					$(".description1").append('<p class = "characterDescription"> No description was found for '+heroName2+'.</p>');
@@ -163,13 +163,13 @@ $scope.woo = function(){
 							console.log(tryIt);
 							$('.loading1').show();
 							$('.loading').show();
-							$.getJSON('http://gateway.marvel.com:80/v1/public/events?name=' + tryIt + '&apikey=9b468921eeceda45d379088e81c48169', function (json){
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events?name=' + tryIt + '&apikey= INSERT YOUR API KEY', function (json){
 							$(".eventName").append(json.data.results[0].title);
 							$(".eventDesc").append(json.data.results[0].description);
 							var wooStuff = (json.data.results[0].id);
 							console.log(wooStuff);
 							
-							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/characters?limit=100&apikey=9b468921eeceda45d379088e81c48169', function (json){
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/characters?limit=100&apikey= INSERT YOUR API KEY', function (json){
 								for(f = 0; f<json.data.results.length; f++ ){
 									var shit = json.data.results[f].name;
 									$('.eventChar').append('<li class = "cEvents">'+json.data.results[f].name+'</li>');
@@ -178,7 +178,7 @@ $scope.woo = function(){
 								$('.charStuff').fadeIn('slow');
 							})
 
-							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?apikey=9b468921eeceda45d379088e81c48169', function (json){
+							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+wooStuff+'/series?apikey= INSERT YOUR API KEY', function (json){
 								
 								for(w = 0; w<json.data.results.length; w++ ){
 									var shit1 = json.data.results[w].title;
