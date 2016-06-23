@@ -64,7 +64,7 @@ Title Bar
 #title{
 	font-size: 4em
 }
-.logo{ 
+.logo{
 	height: 9em;
 	width:auto;
 	margin-left: auto;
@@ -78,18 +78,18 @@ jQuery UI Styles
 ========================================================================== */
 
 .ui-helper-hidden-accessible {
-	 display:none; 
+	 display:none;
 }
-.ui-helper-hidden-accessible { 
+.ui-helper-hidden-accessible {
 	position: absolute; left:-999em;
 }
 
 .ui-autocomplete{
-	 height: auto; 
+	 height: auto;
 	width:10em;
 	list-style:none;
 	line-height: 2em;
-	overflow-y: hidden; 
+	overflow-y: hidden;
 	overflow-x: hidden;
 	font-size: 1.2em;
 	border:2px solid #F9BF3B;
@@ -108,7 +108,7 @@ Main Content
 }
 
 .eventPush{
-	margin-left:2 
+	margin-left:2
 }
 
 .cEvents, .cStories{
@@ -120,7 +120,7 @@ Main Content
 	font-size: 1.2em;
 	margin-top: 2em
 }
-.description, .description1{ 
+.description, .description1{
 	margin-top:20%;
 }
 
@@ -197,7 +197,7 @@ Main Content
 	margin-top: 1em;
 	margin-left: 4em
 }
-.banner{ 
+.banner{
 	margin-bottom: 3em;
 	margin-left: 1em;
 	margin-right: 1em;
@@ -230,7 +230,7 @@ Media Queries
 	#title{
 		font-size: 3.5em
 	}
-	.banner{ 
+	.banner{
 		margin-bottom: 3em;
 		text-align: center;
 		margin-left: 10%;
@@ -252,7 +252,7 @@ Media Queries
 		width: 80vw;
 		height: 80vh;
 	}
-	.ui-autocomplete { 
+	.ui-autocomplete {
 		width:45vw;
 		list-style:circle;
 		height: auto;
