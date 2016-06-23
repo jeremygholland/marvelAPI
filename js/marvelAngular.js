@@ -18,10 +18,13 @@ app.controller ('marvelContrl', function($scope){
 	var marvel1 = [];
 	var marvel2 = [];
 	var results1 = [];
-	var wooStuff;
+	var eventStuff;
 	var totalChar = [];
 	$scope.wooCharacter = '';
 	$scope.wooCharacter1 = '';
+
+
+
 
 
 $scope.woo = function(){
@@ -159,7 +162,7 @@ $scope.woo = function(){
 								url: 'http://gateway.marvel.com:80/v1/public/events?name=' + tryIt + '&apikey=64f1f5a1ab896a13dd9c6b4009b0817e',
 								dataType: 'json',
 								success: function(json){
-							$(".eventName").append(json.data.results[0].title);
+							$(".wooStuff").append(json.data.results[0].title);
 							$(".eventDesc").append(json.data.results[0].description);
 							var wooStuff = (json.data.results[0].id);
 							console.log(wooStuff);
@@ -244,7 +247,7 @@ $scope.woo = function(){
 			$('.events').html('');
 			$('.eventChar').html('');
 			$(".eventDesc").html('');
-			$(".eventName").html('');
+			$(".wooStuff").html('');
 			$('.name1').html('');
 			$('.description1').html('');
 			$('.wooNess').html('');

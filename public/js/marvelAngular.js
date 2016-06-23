@@ -21,7 +21,7 @@ app.controller ('marvelContrl', function($scope){
 	var eventName;
 	var totalChar = [];
 	$scope.wooCharacter = '';
-	$scope.wooCharacter1 = '';	
+	$scope.wooCharacter1 = '';
 
 
 
@@ -30,7 +30,7 @@ var totalChar = [
 
 "3-D Man", "A-Bomb (HAS)", "A.I.M.", "Aaron Stack", "Abomination (Emil Blonsky)",  "Absorbing Man", "Abyss", "Abyss (Age of Apocalypse)", "Adam Destine", "Adam Warlock", "Aegis (Trey Rollins)", "Agent Brand", "Agent X (Nijo)", "Agent Zero", "Agents of Atlas", "Aginar", "Air-Walker (Gabriel Lan)", "Ajak", "Ajaxis", "Akemi", "Alain", "Albert Cleary", "Albion", "Alex Power", "Alex Wilder", "Alexa Mendez", "Alexander Pierce", "Alice", "Alicia Masters", "Alpha Flight", "Alvin Maker", "Amadeus Cho", "Amanda Sefton", "Amazoness", "American Eagle (Jason Strongbow)", "Amiko", "Amora", "Amphibian (Earth-712)", "Amun", "Ancient One", "Angel (Thomas Halloway)", "Angel (Warren Worthington III)", "Angela (Aldrif Odinsdottir)", "Anita Blake", "Anne Marie Hoag", "Annihilus", "Anole", "Ant-Man (Eric O'Grady)", "Ant-Man (Scott Lang)", "Anthem", "Apocalypse", "Aqueduct", "Arachne", "Araٌa", "Arcade", "Arcana", "Archangel", "Arclight", "Ares", "Argent", "Armadillo", "Armor (Hisako Ichiki)", "Armory", "Arnim Zola", "Arsenic", "Artiee", "Asgardian", "Askew-Tronics", "Asylum", "Atlas (Team)", "Aurora", "Avalanche", "Avengers",  "Azazel (Mutant)", "Banshee", "Banshee (Theresa Rourke)", "Baron Strucker", "Baron Zemo (Heinrich Zemo)", "Baroness S'Bak", "Barracuda", "Bart Rozum", "Bastion", "Batroc the Leaper", "Battering Ram", "Beak", "Beast",  "Becatron", "Bedlam", "Beef", "Beetle (Abner Jenkins)", "Ben Grimm",
 "Ben Parker", "Ben Reilly", "Ben Urich", "Bengal", "Beta-Ray Bill", "Betty Brant", "Betty Ross", "Beyonder", "Bi-Beast", "Big Bertha", "Big Wheel", "Bill Hollister", "Bishop",  "Black Bird", "Black Bolt", "Black Cat",  "Black Crow", "Black Knight (Sir Percy of Scandia)", "Black Panther",  "Black Queen", "Black Tarantula", "Black Tom", "Black Widow",   "Blackheart", "Blacklash", "Blackout", "Blade", "Blastaar", "Blazing Skull", "Blindfold", "Blink", "Blizzard", "Blob", "Blockbuster", "Blok", "Bloke", "Blonde Phantom", "Bloodaxe", "Bloodscream", "Bloodstorm", "Bloodstrike", "Blue Blade", "Blue Marvel", "Blue Shield", "Blur", "Bob, Agent of Hydra", "Boom Boom", "Boomer", "Boomerang", "Box", "Bride of Nine Spiders (Immortal Weapons)", "Bromley", "Brood", "Brother Voodoo", "Brotherhood of Evil Mutants",  "Bruce Banner", "Brute", "Bucky", "Bug", "Bulldozer", "Bullseye", "Bushwacker", "Butterfly", "Cable",   "Calamity", "Caliban", "Callisto", "Callisto (Age of Apocalypse)", "Calypso", "Cammi", "Cannonball", "Cap'n Oz", "Captain America",  "Captain Britain",  "Captain Cross", "Captain Flint", "Captain Marvel (Carol Danvers)", "Captain Marvel (Genis-Vell)", "Captain Marvel (Mar-Vell)", "Captain Marvel (Monica Rambeau)",
-"Captain Marvel (Phyla-Vell)", "Captain Midlands", "Captain Stacy", "Captain Universe", "Cardiac", "Caretaker", "Cargill", "Carlie Cooper", "Carmella Unuscione", "Carnage", "Carol Danvers", "Carol Hines", "Cassandra Nova", "Catseye", "Cecilia Reyes", "Celestials", "Centennial", "Centurions", "Cerebro", "Cerise", "Ch'od", "Chamber", "Chameleon", "Champions", "Changeling", "Charles Xavier", "Charlie Campion", "Chase Stein", "Chat", "Chimera", "Chores MacGillicudy", "Christian Walker", "Chronomancer", "ClanDestine", "Clea",  "Clint Barton", "Cloak", "Cloud 9", "Cobalt Man", "Colleen Wing", "Colonel America", "Colossus", "Confederates of the Curious", "Constrictor", "Contessa (Vera Vidal)", "Controller", "Cornelius", "Corsair", "Cosmo (dog)", "Cottonmouth", "Count Nefaria", "Countess", "Crimson Crusader", "Crimson Dynamo", "Crimson King", "Crossbones", "Crule", "Crusher Hogan","Crystal", "Cuckoo", "Curt Conners", "Cuthbert", "Cyber", "Cyclops",   "Cypher", "D'Ken Neramani", "Dagger", "Daily Bugle", "Daimon Hellstrom", "Daken", "Dakota North", "Damage Control", "Dani Moonstar", "Danny Rand", "Daredevil",  "Dargo Ktor", "Dark Avengers", "Dark Beast", "Dark Phoenix", "Dark X-Men", "Darkhawk", "Darkstar", "Darwin", "Dazzler", "Deacon Frost", "Dead Girl", "Deadpool", 
+"Captain Marvel (Phyla-Vell)", "Captain Midlands", "Captain Stacy", "Captain Universe", "Cardiac", "Caretaker", "Cargill", "Carlie Cooper", "Carmella Unuscione", "Carnage", "Carol Danvers", "Carol Hines", "Cassandra Nova", "Catseye", "Cecilia Reyes", "Celestials", "Centennial", "Centurions", "Cerebro", "Cerise", "Ch'od", "Chamber", "Chameleon", "Champions", "Changeling", "Charles Xavier", "Charlie Campion", "Chase Stein", "Chat", "Chimera", "Chores MacGillicudy", "Christian Walker", "Chronomancer", "ClanDestine", "Clea",  "Clint Barton", "Cloak", "Cloud 9", "Cobalt Man", "Colleen Wing", "Colonel America", "Colossus", "Confederates of the Curious", "Constrictor", "Contessa (Vera Vidal)", "Controller", "Cornelius", "Corsair", "Cosmo (dog)", "Cottonmouth", "Count Nefaria", "Countess", "Crimson Crusader", "Crimson Dynamo", "Crimson King", "Crossbones", "Crule", "Crusher Hogan","Crystal", "Cuckoo", "Curt Conners", "Cuthbert", "Cyber", "Cyclops",   "Cypher", "D'Ken Neramani", "Dagger", "Daily Bugle", "Daimon Hellstrom", "Daken", "Dakota North", "Damage Control", "Dani Moonstar", "Danny Rand", "Daredevil",  "Dargo Ktor", "Dark Avengers", "Dark Beast", "Dark Phoenix", "Dark X-Men", "Darkhawk", "Darkstar", "Darwin", "Dazzler", "Deacon Frost", "Dead Girl", "Deadpool",
 "Death", "Deathbird", "Deathcry", "Deathlok",  "Debra Whitman", "Debrii", "Deena Pilgrim", "Defenders", "Demogoblin", "Destiny", "Detective Soap", "Deviants", "Devil Dinosaur (Devil Dinosaur)", "Devil Dinosaur (HAS)", "Devos", "Dexter Bennett", "Diablo", "Diamondback (Rachel Leighton)", "Dinah Soar", "Dirk Anger", "Doc Samson", "Doctor Doom",  "Doctor Faustus", "Doctor Octopus",  "Doctor Spectrum", "Doctor Strange", "Dog Brother #1", "Domino", "Donald Blake", "Doomsday Man", "Doop", "Doorman", "Dorian Gray", "Dormammu",  "Dracula", "Dragon Lord", "Dragon Man", "Drax", "Dreadnoughts", "Dreaming Celestial", "Druig", "Dum Dum Dugan", "Dust", "Earthquake", "Echo", "Eddie Brock", "Eddie Lau", "Edward 'Ted' Forrester", "Edwin Jarvis", "Ego", "Electro",  "Elektra", "Elektra ", "Elements of Doom", "Elite", "Elixir", "Elloe Kaifi", "Elsa Bloodstone", "Emma Frost", "Empath", "Emplate", "Enchantress (Amora)", "Enchantress (Sylvie Lushton)", "Ender Wiggin", "Energizer", "Epoch", "Erik the Red", "Eternals", "Eternity", "Excalibur", "Exiles", "Exodus", "Expediter", "Ezekiel", "Ezekiel Stane", "Fabian Cortez", "Falcon", "Fallen One", "Famine", "Fantastic Four", "Fantastick Four", "Fantomex", "Fat Cobra", "Felicia Hardy", "Fenris", "Feral", "Fin Fang Foom", "Firebird", "Firebrand", "Firedrake",
 "Firelord", "Firestar", "Fixer (Paul Norbert Ebersol)", "Flatman", "Flying Dutchman", "Foggy Nelson", "Force Works", "Forearm", "Forge", "Forgotten One", "Frank Castle", "Frankenstein's Monster", "Franklin Richards", "Franklin Storm", "Freak", "Frightful Four", "Frog Thor", "Frog-Man", "Gabe Jones", "Galactus", "Galia", "Gambit", "Gamma Corps", "Gamora",  "Gargoyle", "Gargoyle (Yuri Topolov)", "Garia", "Garrison Kane", "Gateway", "Gauntlet (Joseph Green)", "Geiger", "Gene Sailors", "Generation X", "Genesis", "Genis-Vell", "Gertrude Yorkes", "Ghost Rider (Daniel Ketch)", "Ghost Rider (Johnny Blaze)",  "Giant Girl", "Giant Man", "Giant-dok",  "Gideon", "Git Hoskins", "Gladiator (Kallark)", "Gladiator (Melvin Potter)", "Glenn Talbot", "Glorian", "Goblin Queen", "Golden Guardian", "Goliath (Bill Foster)", "Gorgon", "Gorilla Man", "Grandmaster", "Gravity", "Great Lakes Avengers", "Green Goblin (Barry Norman Osborn)", "Green Goblin (Harry Osborn)",  "Gressill", "Grey Gargoyle", "Greymalkin", "Grim Reaper", "Groot", "Guardian", "Guardians of the Galaxy", "Guardsmen", "Gunslinger", "GW Bridge", "Gwen Stacy",  "H.A.M.M.E.R.", "H.E.R.B.I.E.", "Hairball", "Half-Life (Tony Masterson)", "Hammerhead",  "Hank Pym", "Hannibal King", "Happy Hogan", "Hardball", "Harley Davidson Cooper", "Harpoon", "Harrier", "Harry Heck", "Harry Osborn", "Hate-Monger (Adolf Hitler)", "Havok", "Hawkeye", "Hawkeye (Kate Bishop)", "Hedge Knight",
 "Hellcat (Patsy Walker)", "Hellfire Club",  "Hellion", "Hellions (Squad)", "Hemingway", "Henry Peter Gyrich", "Hepzibah", "Hercules", "Heroes For Hire", "Hex", "High Evolutionary", "Hindsight Lad", "Hiroim", "Hitman", "Hitomi Sakuma", "Hobgoblin (Jason Macendale)", "Hobgoblin (Robin Borne)", "Hobgoblin (Roderick Kingsley)", "Holocaust (Age of Apocalypse)", "Holy", "Hope Summers", "Howard Saint", "Howard The Duck", "Hulk",  "Hulk-dok",  "Hulkling", "Human Cannonball", "Human Fly (Richard Deacon)", "Human Robot", "Human Torch", "Human Torch (Jim Hammond)",  "Humbug", "Husk", "Hussar", "Hydra", "Hydro-Man", "Hyperion (Earth-712)", "Hypno-Hustler", "Iceman", "Ikaris", "Illuminati", "Ilyana Rasputin", "Imp", "Imperfects", "Imperial Guard", "Impossible Man", "In-Betweener", "Inertia", "Infant Terrible", "Inhumans", "Ink", "Invaders", "Invisible Woman",  "Iron Cross Army", "Iron Fist (Danny Rand)", "Iron Lad", "Iron Man", "Iron Monger", "Iron Patriot", "Ironclad", "J. Jonah Jameson", "Jack Flag", "Jack Murdock", "Jack O' Lantern", "Jack Power", "Jackal", "Jackpot", "James Buchanan Barnes", "James Howlett", "Jamie Braddock", "Jane Foster", "Janus, the Nega-Man", "Jasper Sitwell", "Jazinda", "Jean Grey",
@@ -46,7 +46,7 @@ var totalChar = [
 ]
 
 	$('#bigTime').autocomplete({
-		source: totalChar 
+		source: totalChar
 	});
 	$('#littleTime').autocomplete({
 		source: totalChar
@@ -90,7 +90,7 @@ $scope.woo = function(){
 
 			})
 
-  
+
   				});
 			$('.image').fadeIn(1000)
 			$("#firstInfo").fadeIn(1500);
@@ -119,7 +119,7 @@ $scope.woo = function(){
   				$(".image1").attr("src", json.data.results[0].thumbnail.path + "/detail.jpg");
   				}
   				var id2 = json.data.results[0].id;
-				
+
 				$.each(json.data.results[0].events.items, function(i, item){
 					marvel2.push(item.name);
 
@@ -144,7 +144,7 @@ $scope.woo = function(){
 				}
 
 				//this is fucked but it's a start
-			
+
 			}
 			if(results1 == ''){
 				$('.events').append("<p> Odd, it seems like these two characters don't share events. Try again!</p>");
@@ -168,7 +168,7 @@ $scope.woo = function(){
 							$(".eventDesc").append(json.data.results[0].description);
 							var eventName = (json.data.results[0].id);
 							console.log(eventName);
-							
+
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+eventName+'/characters?limit=100&apikey= INSERT YOUR API KEY', function (json){
 								for(f = 0; f<json.data.results.length; f++ ){
 									var shit = json.data.results[f].name;
@@ -179,7 +179,7 @@ $scope.woo = function(){
 							})
 
 							$.getJSON('http://gateway.marvel.com:80/v1/public/events/'+eventName+'/series?apikey= INSERT YOUR API KEY', function (json){
-								
+
 								for(w = 0; w<json.data.results.length; w++ ){
 									var shit1 = json.data.results[w].title;
 									$('.eventSer').append('<li class = "cStories">'+json.data.results[w].title+'</li>');
@@ -200,7 +200,7 @@ $scope.woo = function(){
 			setTimeout(function(){
 				callback(null, 3);
 			}, 2500);
-	}, 
+	},
 
 		},
 		function(err, results){
@@ -244,10 +244,6 @@ $scope.woo = function(){
 			$('.image').hide();
 			$('.loading1').hide();
 			$('.loading').hide();
-			
-		}	
+
+		}
 });
-
-
-
-
