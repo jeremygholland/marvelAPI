@@ -20,15 +20,12 @@
   height: 100vh;
   display: flex;
   flex-wrap: wrap;
-  z-index: -600;
   justify-content: space-between; }
   .contentContainer .content {
     width: 30vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-  .contentContainer .content2 {
-    z-index: 1; }
 
 .eventList {
   font-size: 1.2em;
